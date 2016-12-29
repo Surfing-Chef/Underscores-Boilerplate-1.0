@@ -87,6 +87,15 @@ Check if Node and ruby are installed.  Versions will show if installed.
 ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]
 
 ```
+
+Update checks:
+```console
+ruby> gem update --system
+Latest version currently installed. Aborting.
+
+node>npm install npm@latest -g
+```
+
 Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
 
 Install grunt-cli globally
