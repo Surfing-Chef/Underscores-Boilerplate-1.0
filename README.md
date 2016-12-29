@@ -89,4 +89,9 @@ ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]
 ```
 Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
 
+Install grunt-cli globally
+```console
+>npm install -g grunt-cli
+```
+
 ## package.json and gruntfile.js
