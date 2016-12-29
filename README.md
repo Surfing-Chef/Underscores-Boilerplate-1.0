@@ -88,3 +88,5 @@ ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]
 
 ```
 Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
+
+## package.json and gruntfile.js
