@@ -78,8 +78,13 @@ git push origin master
 ``` 
 
 ## Node.js and Ruby
-Install or update Node.js
-- check if installed
+Check if Node and ruby are installed.  Versions will show if installed.
+```console
+>npm -v
+3.10.9
 
-Install or update Ruby
-- check if installed
+>ruby -v
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]
+
+```
+Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
