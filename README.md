@@ -24,6 +24,18 @@ but I like to know how and why things are.
 Using the command line gives one much more control over their package installs
 and updates as well.
 
+If your directory path is extremely long, the following command shortens it to just a chevron.  Use the **cd** command to see where you are 
+```
+c:\this\is\a\really\long\path\name\that\clutters\up\the\console\makking\things\hard\to\read>
+
+prompt $g
+
+>
+
+>cd
+c:\this\is\a\really\long\path\name\that\clutters\up\the\console\makking\things\hard\to\read>
+```
+
 ## Git and Github
 If you dont use Git and Github, then move along. I feel bad for you, not using some sort of version control system, but be that as it may...
 
@@ -64,3 +76,10 @@ Push the changes in your local repository to GitHub.
 ```console
 git push origin master
 ``` 
+
+## Node.js and Ruby
+Install or update Node.js
+- check if installed
+
+Install or update Ruby
+- check if installed
