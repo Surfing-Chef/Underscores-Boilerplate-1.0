@@ -1,6 +1,5 @@
 # Underscores-Boilerplate-1.0
-**Underscores with Sass**
-The master branch is a basic theme, sass ready, with no specified workflow. Additional branches represent different workflows based on the Underscores theme.
+Underscores with Sass, Grunt and Compass workflow
 
 ##*INSTALLATION OUTLINE*
 ## Wordpress
