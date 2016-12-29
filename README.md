@@ -45,7 +45,7 @@ Initialize the local directory as a Git repository:
 git init
 ``` 
 
-Add the files in your new local repository. This stages them for the first commit. Disregard any `LF will be replaced by CRLF...` warnings.
+Add the files in your new local repository. This stages them for the first commit. Disregard any **_LF will be replaced by CRLF..._** warnings.
 ```console
 git add .
 ```  
