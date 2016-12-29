@@ -26,13 +26,12 @@ and updates as well.
 
 If your directory path is extremely long, the following command shortens it to just a chevron.  Use the **cd** command to see where you are 
 ```
-c:\this\is\a\really\long\path\name\that\clutters\up\the\console\makking\things\hard\to\read>
+c:\this\is\a\really\long\path\name\that\clutters\up\the\console\making\things\hard\to\read>
 
 prompt $g
-
 >
 
->cd
+> cd
 c:\this\is\a\really\long\path\name\that\clutters\up\the\console\makking\things\hard\to\read>
 ```
 
@@ -49,22 +48,22 @@ The following is taken from the pages of Github: [https://help.github.com/articl
 
 Open a new command line, and navigate into the directory of your underscores theme.  Mine is as follows:
 ```console
-cd C:\wamp64\www\underscores-dev\wp-content\themes\underscoresboilerplate
+> cd C:\wamp64\www\underscores-dev\wp-content\themes\underscoresboilerplate
 ```
 
 Initialize the local directory as a Git repository:
 ```console
-git init
+> git init
 ``` 
 
 Add the files in your new local repository. This stages them for the first commit. Disregard any **_LF will be replaced by CRLF..._** warnings.
 ```console
-git add .
+> git add .
 ```  
 
 Commit the files that you've staged in your local repository.
 ```console
-git commit -m "initial commit"
+> git commit -m "initial commit"
 ``` 
 
 In the Command prompt, add the URL for the remote repository where your local repository will be pushed.  This can be copied from the link within the repository you set up above.  Look for **Clone or download** copy the URL from there.  You might see instructions similar to these as well.
@@ -80,10 +79,10 @@ git push origin master
 ## Node.js and Ruby
 Check if Node and ruby are installed.  Versions will show if installed.
 ```console
->npm -v
+> npm -v
 3.10.9
 
->ruby -v
+> ruby -v
 ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]
 
 ```
@@ -93,9 +92,9 @@ Update checks:
 ruby> gem update --system
 Latest version currently installed. Aborting.
 
-node>npm install npm@latest -g
+node> npm install npm@latest -g
 
-npm>npm update -g npm
+npm> npm update -g npm
 
 ```
 
@@ -108,7 +107,7 @@ Install grunt-cli
 
 Install compass
 ```console
->gem install compass
+> gem install compass
 ```
 
 ## package.json and gruntfile.js
