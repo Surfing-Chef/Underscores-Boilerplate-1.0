@@ -98,9 +98,14 @@ node>npm install npm@latest -g
 
 Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
 
-Install grunt-cli globally
+Install grunt-cli
 ```console
 >npm install -g grunt-cli
+```
+
+Install compass
+```console
+>gem install compass
 ```
 
 ## package.json and gruntfile.js
