@@ -28,7 +28,7 @@ and updates as well.
 If you dont use Git and Github, then move along. I feel bad for you, not using some sort of version control system, but be that as it may...
 
 Sign in to your Github account.
-Create a new repository, do not create a **README.md** or **.gitignore** at this point.  
+Create a new repository, but do not create a **README.md** or **.gitignore** at this point. Adding anything except a name at this point confuses the initialization process. 
 You can go back and create a **README.md** later, and we will create a **.gitignore** later.
 Ensure you have git installed on your computer.  I use Github Desktop which comes with git and git bash. Download
 and install from [https://desktop.github.com/]. Be sure to click the **Use Git from the Windows Command Prompt** option.
@@ -55,7 +55,7 @@ Commit the files that you've staged in your local repository.
 git commit -m "initial commit"
 ``` 
 
-In the Command prompt, add the URL for the remote repository where your local repository will be pushed.  This can be copied from the link within the repository you set up above.  Look for the green **Clone or download** button and copy the URL from there.
+In the Command prompt, add the URL for the remote repository where your local repository will be pushed.  This can be copied from the link within the repository you set up above.  Look for **Clone or download** copy the URL from there.  You might see instructions similar to these as well.
 ```console
 git remote add origin https://github.com/YOUR-username/YOUR-repository-name.git
 ``` 
