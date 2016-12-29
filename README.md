@@ -94,6 +94,9 @@ ruby> gem update --system
 Latest version currently installed. Aborting.
 
 node>npm install npm@latest -g
+
+npm>npm update -g npm
+
 ```
 
 Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
