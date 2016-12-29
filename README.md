@@ -1,5 +1,5 @@
 # Underscores-Boilerplate-1.0
-Underscores with Sass, Grunt and Compass workflow
+Underscores with Sass, Grunt and Compass development workflow
 
 ##*INSTALLATION OUTLINE*
 ## Wordpress
