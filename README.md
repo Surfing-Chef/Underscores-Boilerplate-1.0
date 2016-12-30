@@ -115,7 +115,7 @@ theme\root\directory> npm init
 ```
 Follow the prompts to create a *_package.json_*. The content in parentheses will be put into the file if no other value is supplied. The created file can be edited later so do not worry about ommisions or mistakes.  Simply open the file in a code editor and adjust as neccessary.
 
-The next step is to install the project dependencies in the same directory as the *_package.json_*. Here I will install *_grunt_*, ... using the command line. Be sure you are in the same diectory as the json file.
+The next step is to install the project dependencies in the same directory as the *_package.json_*. Here I will install *_grunt, grunt-contrib-watch, grunt-contrib-compass, grunt-contrib-uglify_* ... using the command line. Be sure you are in the same directory as the json file.
 ```console
 theme\root\directory> npm install --save-dev grunt
 ```
@@ -126,4 +126,4 @@ theme\root\directory> npm install
 The previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
 
 ### gruntfile.js
- 
+ -automatic reload info at [https://www.lynda.com/CSS-tutorials/Reloading-your-browser-save/140777/153468-4.html]
