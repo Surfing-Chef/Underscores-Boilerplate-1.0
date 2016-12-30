@@ -1,0 +1,25 @@
+{
+  "name": "underscoresboilerplate",
+  "version": "1.0.0",
+  "description": "Underscores based theme with grunt, sass and compass worflow.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Surfing-Chef/Underscores-Boilerplate-1.0.git"
+  },
+  "keywords": [
+    "underscores",
+    "wordpress",
+    "sass",
+    "compass",
+    "grunt",
+    "node.js",
+    "ruby"
+  ],
+  "author": "Surfing Chef",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Surfing-Chef/Underscores-Boilerplate-1.0/issues"
+  },
+  "homepage": "https://github.com/Surfing-Chef/Underscores-Boilerplate-1.0#readme"
+}
