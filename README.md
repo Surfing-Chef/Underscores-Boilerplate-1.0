@@ -126,5 +126,5 @@ theme\root\directory> npm install
 ```
 The previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
 
- ## gruntfile.js
+## gruntfile.js
  
