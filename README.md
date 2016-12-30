@@ -76,6 +76,10 @@ Push the changes in your local repository to GitHub.
 git push origin master
 ``` 
 
+Create a .gitignore and save it in the root of the theme directory.  I have a Gist maintained here: [https://gist.github.com/Surfing-Chef/6d08c52b6450a7c071b92e9994ecdcf3].
+
+Git and Github is now ready to track changes.  I use Github Desktop, however using the command line to commit and push changes might be part of a workflow you choose to use. The use and scope of Git is not within the scope of this document. I definitely recommend using Git or some form of version control.  I'll leave it at that.
+
 ## Node.js and Ruby
 Check if Node and ruby are installed.
 ```console
@@ -106,3 +110,7 @@ Install compass
 ```
 
 ## package.json and gruntfile.js
+My preferred method of creating a package.json is on the command line:
+```console
+> npm init
+```
