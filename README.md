@@ -1,8 +1,7 @@
 # Underscores-Boilerplate-1.0
-Underscores with Sass, Grunt and Compass development workflow
+This is an outline for the installation of an Underscores-based Wordpress theme with a Sass, Grunt and Compass development workflow
 
-##*INSTALLATION OUTLINE*
-## Wordpress
+### Wordpress
 - Create underscores-dev folder and install fresh copy of Wordpress.
 - Change timezone, set tagline etc on dashboard.
 - Download the latest test data: [https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml].
@@ -11,12 +10,12 @@ Underscores with Sass, Grunt and Compass development workflow
 - Navigate to the downloaded theme-unit-test-data.xml and click `Upload file and import`.
 - Under "Import Attachments," check the `Download and import file attachments` box and click `submit`.
 
-## Underscores
+### Underscores
 - Go to [https://underscores.me/] and click `Advanced Options` under Theme Name box.
 - Fill out the form, check the `_sassify!` box and click `GENERATE`.
 - Copy the contents of the downloaded folder into the themes directory of your fresh wordpress installation.
 
-## Working with the Command Line
+### Working with the Command Line
 The next steps - Git, Node.js, Ruby - require some use of the command line.  
 I was intimidated by this at first, but its not really that complex.
 There are wordpress plugins for implementing sass in wordpress themes,
@@ -35,7 +34,7 @@ prompt $g
 c:\this\is\a\really\long\path\name\that\clutters\up\the\console\makking\things\hard\to\read>
 ```
 
-## Git and Github
+### Git and Github
 If you dont use Git and Github, then move along. I feel bad for you, not using some sort of version control system, but be that as it may...
 
 Sign in to your Github account.
@@ -80,7 +79,7 @@ Create a .gitignore and save it in the root of the theme directory.  I have a Gi
 
 Git and Github is now ready to track changes.  I use Github Desktop, however using the command line to commit and push changes might be part of a workflow you choose to use. The use and scope of Git is not within the scope of this document. I definitely recommend using Git or some form of version control.  I'll leave it at that.
 
-## Node.js and Ruby
+### Node.js and Ruby
 Check if Node and ruby are installed.
 ```console
 > npm -v            ## Versions will show if installed.
@@ -109,7 +108,7 @@ Install compass
 > gem install compass
 ```
 
-## package.json
+### package.json
 My preferred method of creating a *_package.json_* is on the command line, in the theme's root directory:
 ```console
 theme\root\directory> npm init
@@ -126,5 +125,5 @@ theme\root\directory> npm install
 ```
 The previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
 
-## gruntfile.js
+### gruntfile.js
  
