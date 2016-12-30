@@ -4,7 +4,7 @@ This is an outline for the installation of an Underscores-based Wordpress theme 
 ### Wordpress
 - Create underscores-dev folder and install fresh copy of Wordpress.
 - Change timezone, set tagline etc on dashboard.
-- Download the latest test data: [https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml].
+- Download the latest [test data](https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml). Or use [WP Test](https://github.com/poststatus/wptest). **At time of preparing this document *WP Test* had a path error in the xml causing media install issues.  There is a fix listed in the issues.**
 - Activate Wordpress Import `Tools > Import > WordPress > Install Now`.
 - Once installed, click `Run Imported > Choose File`.
 - Navigate to the downloaded theme-unit-test-data.xml and click `Upload file and import`.
