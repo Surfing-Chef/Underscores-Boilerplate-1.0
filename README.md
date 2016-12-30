@@ -120,7 +120,7 @@ The next step is to install the project dependencies in the same directory as th
 ```console
 theme\root\directory> npm install --save-dev grunt
 ```
-I usually note errors and warnings while installing each depenent and will update appropriately to ensure proper execution at project runtime.  This install process will create a new folder called **node_modules** which contains the necessary package file for the dependents. The nice thing about installing the packages this way is that *_npm_* will write code to the *_package.json_* file rather than manually writing the code.  The alternative is adding the dependents manually to the *_package.json_* and installing them all at once. This latter method may increase the chances of coding error.
+I usually note errors and warnings while installing each depenent and will update appropriately to ensure proper execution at project runtime.  This install process will create a new folder called **node_modules** which contains the necessary package file for the dependents. The nice thing about installing the packages this way is that *_npm_* will write code to the *_package.json_* file rather than manually writing the code.  The alternative is adding the dependents manually to the *_package.json_* and installing them all at once. Note that this latter method may increase the chances of coding error.
 ```console
 theme\root\directory> npm install
 ```
