@@ -1,5 +1,5 @@
 # Underscores-Boilerplate-1.0
-This is an outline for the installation of an Underscores-based Wordpress theme with a Sass, Grunt and Compass development workflow
+> This is an outline for the installation of an Underscores-based Wordpress theme with a Sass, Grunt and Compass development workflow
 
 ### Wordpress
 - Create underscores-dev folder and install fresh copy of Wordpress.
@@ -13,17 +13,19 @@ This is an outline for the installation of an Underscores-based Wordpress theme 
 ### Underscores
 - Go to [https://underscores.me/] and click `Advanced Options` under Theme Name box.
 - Fill out the form, check the `_sassify!` box and click `GENERATE`.
-- Copy the contents of the downloaded folder into the themes directory of your fresh wordpress installation.
-- Add a folder called _dev_ for development files, files not meant for use on the remote site.  Within this folder create two additional folders, _css_ and _js_.
+- Copy the contents of the downloaded folder (I called mine underscores-boilerplate) into the themes directory of your fresh wordpress installation.
+- Add a folder called **_dev_** into the Underscores theme folder to organize files for development.  Within this folder create a **_js_** folder.
+- Move the **_sass_** folder from the theme root into the new **_dev_** folder.  Also move the files from the **_js_** folder into the new **_dev/js_** folder.
+
 ### Working with the Command Line
 The next steps - Git, Node.js, Ruby - require some use of the command line.  
 I was intimidated by this at first, but its not really that complex.
 There are wordpress plugins for implementing sass in wordpress themes,
 but I like to know how and why things are.
-Using the command line gives one much more control over their package installs
-and updates as well.
+Using the command line gives much more control over package installs
+and updates.
 
-If your directory path is extremely long, the following command shortens it to just a chevron.  Use the **cd** command to see where you are 
+If a directory path is extremely long, the following command shortens it to just a chevron.  The **cd** command will show your current directory:
 ```
 c:\this\is\a\really\long\path\name\that\clutters\up\the\console\making\things\hard\to\read>
 
@@ -35,52 +37,49 @@ c:\this\is\a\really\long\path\name\that\clutters\up\the\console\makking\things\h
 ```
 
 ### Git and Github
-If you dont use Git and Github, then move along. I feel bad for you, not using some sort of version control system, but be that as it may...
+- Sign in to your Github account.
+- Create a new repository, but do not create a **README.md** or **.gitignore** at this point. Adding anything except the name at this point confuses the next steps. 
+- **README.md** and **.gitignore** can be created later.
+- Ensure you have **[Git](https://git-scm.com/downloads)** or **[Github Desktop](https://desktop.github.com/)** installed on your computer. Be sure to click the **Use Git from the Windows Command Prompt** option.
 
-Sign in to your Github account.
-Create a new repository, but do not create a **README.md** or **.gitignore** at this point. Adding anything except a name at this point confuses the initialization process. 
-You can go back and create a **README.md** later, and we will create a **.gitignore** later.
-Ensure you have git installed on your computer.  I use Github Desktop which comes with git and git bash. Download
-and install from [https://desktop.github.com/]. Be sure to click the **Use Git from the Windows Command Prompt** option.
+_The following is taken from the pages of Github: [https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/]:_
 
-The following is taken from the pages of Github: [https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/]:
-
-Open a new command line, and navigate into the directory of your underscores theme.  Mine is as follows:
+- Open a new command line, and navigate into the directory of your underscores theme.  Mine is as follows:
 ```console
 > cd C:\wamp64\www\underscores-dev\wp-content\themes\underscoresboilerplate
 ```
 
-Initialize the local directory as a Git repository:
+- Initialize the local directory as a Git repository:
 ```console
 > git init
 ``` 
 
-Add the files in your new local repository. This stages them for the first commit. Disregard any **_LF will be replaced by CRLF..._** warnings.
+- Add the files in your new local repository. This stages them for the first commit. Disregard any **_LF will be replaced by CRLF..._** warnings:
 ```console
 > git add .
 ```  
 
-Commit the files that you've staged in your local repository.
+- Commit the files that you've staged in your local repository:
 ```console
 > git commit -m "initial commit"
 ``` 
 
-In the Command prompt, add the URL for the remote repository where your local repository will be pushed.  This can be copied from the link within the repository you set up above.  Look for **Clone or download** copy the URL from there.  You might see instructions similar to these as well.
+- In the Command prompt, add the URL for the remote repository where your local repository will be pushed.  This can be copied from the link within the repository you set up above.  Look for **Clone or download** copy the URL from there.  You might see instructions similar to these as well:
 ```console
 git remote add origin https://github.com/YOUR-username/YOUR-repository-name.git
 ``` 
 
-Push the changes in your local repository to GitHub.
+- Push the changes in your local repository to GitHub:
 ```console
 git push origin master
 ``` 
 
-Create a .gitignore and save it in the root of the theme directory.  I have a Gist maintained here: [https://gist.github.com/Surfing-Chef/6d08c52b6450a7c071b92e9994ecdcf3].
+- Create a .gitignore and save it in the root of the theme directory.  I have a Gist maintained here: [https://gist.github.com/Surfing-Chef/6d08c52b6450a7c071b92e9994ecdcf3].
 
-Git and Github is now ready to track changes.  I use Github Desktop, however using the command line to commit and push changes might be part of a workflow you choose to use. The use and scope of Git is not within the scope of this document. I definitely recommend using Git or some form of version control.  I'll leave it at that.
+- Git and Github are now ready to track changes.  Use of Github Desktop or Git Bash and the command line to track changes should be part of any development workflow. The full use potential of Git and Github is not within the scope of this document. At the very least, a version control system to track changes should be utilized. _[read more](https://www.g2crowd.com/categories/version-control-systems)_
 
 ### Node.js and Ruby
-Check if Node and ruby are installed.
+- Check if **Node**, **NPM** and **Ruby** are installed:
 ```console
 > npm -v            ## Versions will show if installed.
 3.10.9                           
@@ -89,16 +88,16 @@ Check if Node and ruby are installed.
 ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]
 ```
 
-Update checks:
+- Check for updates:
 ```console
 > npm update -g npm          ## node-package-manager
 
 > gem update --system        ## ruby
 ```
 
-Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
+- Download and install [Node.js](https://nodejs.org/en/) and/or [Ruby](https://rubyinstaller.org/) if necessary.  
 
-Install compass
+- Install compass:
 ```console
 > gem install compass
 ```
@@ -106,32 +105,31 @@ Install compass
 ### package.json
 
 _[info link](https://docs.npmjs.com/getting-started/using-a-package.json)_
-My preferred method of creating a *_package.json_* is on the command line, in the theme's root directory:
+
+- Create a *_package.json_* using the command line, in the theme's root directory:
 ```console
 theme\root\directory> npm init
 ```
-Follow the prompts to create a *_package.json_*. The content in parentheses will be put into the file if no other value is supplied. The created file can be edited later so do not worry about ommisions or mistakes.  Simply open the file in a code editor and adjust as neccessary.
 
-The next step is to install the project dependencies in the same directory as the *_package.json_*. Here I will install *_grunt, grunt-contrib-watch, grunt-contrib-compass, grunt-contrib-uglify_* ... using the command line. Be sure you are in the same directory as the json file.
+- Follow prompts to create a *_package.json_*. Content in parentheses is the default value if not changed. The created file can be edited later so do not worry about ommisions or mistakes - open the file in a code editor and adjust as neccessary after created.
+
+- Install the project dependencies in the same directory as the *_package.json_* file. Installation of *_grunt, grunt-contrib-watch, grunt-contrib-compass, grunt-contrib-uglify_* are shown below:
 ```console
 theme\root\directory> npm install --save-dev grunt
 ```
-I usually note errors and warnings while installing each depenent and will update appropriately to ensure proper execution at project runtime.  This install process will create a new folder called **node_modules** which contains the necessary package file for the dependents. The nice thing about installing the packages this way is that *_npm_* will write code to the *_package.json_* file rather than manually writing the code.  The alternative is adding the dependents manually to the *_package.json_* and installing them all at once. Note that this latter method may increase the chances of coding error.
-```console
-theme\root\directory> npm install
-```
-The previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
+
+- Note errors and warnings while installing each dependency and update appropriately to ensure proper execution at project runtime.  This install process will create a new folder called **node_modules** containing necessary package files for the dependencies. The nice thing about installing the packages this way is that *_npm_* will write code to the *_package.json_* file rather than manually writing the code.  
+
+> Previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
 
 ### grunt.js
-
-_[info link](http://gruntjs.com/getting-started)_
- -  Install grunt-cli so grunt becomes available in the terminal
+-  Install grunt-cli so grunt becomes available in the terminal:
 
 ```console
 >npm install -g grunt-cli
 ```
 
-- build grunt.json specific to your project.  The following starts with an uglify task;
+- create a gruntfile.js starting with an uglify task to minify JavaScript files:
 ```javascript
 // Wrapper function
 module.exports = function(grunt) {
@@ -152,7 +150,15 @@ module.exports = function(grunt) {
   }); // grunt.initConfig
 }; // module.exports
 ```
-I moved the javascript files from js directory installed in the Underscores theme directory to the new _dev/js_ directory, so the deployed scripts are smaller after uglifying them.
+
+- Run a grunt command to test the new uglify task which should create compressed versions of the javascript files specified in the gruntfile.js:
+```console
+> grunt uglify
+Running "uglify:my_target" (uglify) task
+>> 3 files created.
+```
+
+
 
 
  
