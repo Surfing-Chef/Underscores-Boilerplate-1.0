@@ -14,7 +14,7 @@ This is an outline for the installation of an Underscores-based Wordpress theme 
 - Go to [https://underscores.me/] and click `Advanced Options` under Theme Name box.
 - Fill out the form, check the `_sassify!` box and click `GENERATE`.
 - Copy the contents of the downloaded folder into the themes directory of your fresh wordpress installation.
-
+- Add a folder called _dev_ for development files, files not meant for use on the remote site.  Within this folder create two additional folders, _css_ and _js_.
 ### Working with the Command Line
 The next steps - Git, Node.js, Ruby - require some use of the command line.  
 I was intimidated by this at first, but its not really that complex.
@@ -98,17 +98,14 @@ Update checks:
 
 Install if necessary: [Node.js](https://nodejs.org/en/) and [Ruby](https://rubyinstaller.org/)
 
-Install grunt-cli
-```console
->npm install -g grunt-cli
-```
-
 Install compass
 ```console
 > gem install compass
 ```
 
 ### package.json
+
+_[info link](https://docs.npmjs.com/getting-started/using-a-package.json)_
 My preferred method of creating a *_package.json_* is on the command line, in the theme's root directory:
 ```console
 theme\root\directory> npm init
@@ -125,5 +122,39 @@ theme\root\directory> npm install
 ```
 The previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
 
-### gruntfile.js
+### grunt.js
+
+_[info link](http://gruntjs.com/getting-started)_
+ -  Install grunt-cli so grunt becomes available in the terminal
+
+```console
+>npm install -g grunt-cli
+```
+
+- build grunt.json specific to your project.  The following starts with an uglify task;
+```javascript
+// Wrapper function
+module.exports = function(grunt) {
+  // Load Tasks
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  // Project configuration
+  grunt.initConfig({
+    // Tasks to run, comma separated
+    uglify: {
+      my_target: {
+        files: {
+          'js/customizer.js': ['dev/js/customizer.js'],
+          'js/navigation.js': ['dev/js/navigation.js'],
+          'js/skip-link-focus-fix.js': ['dev/js/skip-link-focus-fix.js']
+        } // files
+      } // my_target
+    } // uglify
+  }); // grunt.initConfig
+}; // module.exports
+```
+I moved the javascript files from js directory installed in the Underscores theme directory to the new _dev/js_ directory, so the deployed scripts are smaller after uglifying them.
+
+
+ 
  -automatic reload info at [https://www.lynda.com/CSS-tutorials/Reloading-your-browser-save/140777/153468-4.html]
+ 
