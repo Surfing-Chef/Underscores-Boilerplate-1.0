@@ -38,7 +38,7 @@ c:\this\is\a\really\long\path\name\that\clutters\up\the\console\makking\things\h
 
 ### Git and Github
 - Sign in to your Github account.
-- Create a new repository, but do not create a **README.md** or **.gitignore** at this point. Adding anything except the name at this point confuses the next steps. 
+- Create a new repository, but do not create a **README.md** or **.gitignore** at this point. Adding anything except the name at this point confuses the next steps.
 - **README.md** and **.gitignore** can be created later.
 - Ensure you have **[Git](https://git-scm.com/downloads)** or **[Github Desktop](https://desktop.github.com/)** installed on your computer. Be sure to click the **Use Git from the Windows Command Prompt** option.
 
@@ -52,7 +52,7 @@ _The following is taken from the pages of Github: [https://help.github.com/artic
 - Initialize the local directory as a Git repository:
 ```console
 > git init
-``` 
+```
 
 - Add the files in your new local repository. This stages them for the first commit. Disregard any **_LF will be replaced by CRLF..._** warnings:
 ```console
@@ -62,17 +62,17 @@ _The following is taken from the pages of Github: [https://help.github.com/artic
 - Commit the files that you've staged in your local repository:
 ```console
 > git commit -m "initial commit"
-``` 
+```
 
 - In the Command prompt, add the URL for the remote repository where your local repository will be pushed.  This can be copied from the link within the repository you set up above.  Look for **Clone or download** copy the URL from there.  You might see instructions similar to these as well:
 ```console
 git remote add origin https://github.com/YOUR-username/YOUR-repository-name.git
-``` 
+```
 
 - Push the changes in your local repository to GitHub:
 ```console
 git push origin master
-``` 
+```
 
 - Create a .gitignore and save it in the root of the theme directory.  I have a Gist maintained here: [https://gist.github.com/Surfing-Chef/6d08c52b6450a7c071b92e9994ecdcf3].
 
@@ -113,12 +113,12 @@ theme\root\directory> npm init
 
 - Follow prompts to create a *_package.json_*. Content in parentheses is the default value if not changed. The created file can be edited later so do not worry about ommisions or mistakes - open the file in a code editor and adjust as neccessary after created.
 
-- Install the project dependencies in the same directory as the *_package.json_* file. Installation of *_grunt, grunt-contrib-watch, grunt-contrib-compass, grunt-contrib-uglify_* are shown below:
+- Install plugins into the same directory as the *_package.json_* file. Installation of *_grunt, grunt-contrib-watch, grunt-contrib-compass, grunt-contrib-uglify_* are shown below:
 ```console
 theme\root\directory> npm install --save-dev grunt
 ```
 
-- Note errors and warnings while installing each dependency and update appropriately to ensure proper execution at project runtime.  This install process will create a new folder called **node_modules** containing necessary package files for the dependencies. The nice thing about installing the packages this way is that *_npm_* will write code to the *_package.json_* file rather than manually writing the code.  
+- Note errors and warnings while installing each plugin and its dependencies, and update appropriately to ensure proper execution at project runtime.  This install process will create a new folder called **node_modules** containing necessary package files for the all plugins' dependencies. The nice thing about installing the plugins this way is that *_npm_* will write code to the *_package.json_* file rather than having to manually input code.  
 
 > Previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
 
@@ -133,13 +133,13 @@ theme\root\directory> npm install --save-dev grunt
 ```javascript
 // Wrapper function
 module.exports = function(grunt) {
-  // Load Tasks
+  // Load plugins
   grunt.loadNpmTasks('grunt-contrib-uglify');
   // Project configuration
   grunt.initConfig({
-    // Tasks to run, comma separated
-    uglify: {
-      my_target: {
+    // Create comma, separated, tasks
+    uglify: {  // task
+      my_target: { // target
         files: {
           'js/customizer.js': ['dev/js/customizer.js'],
           'js/navigation.js': ['dev/js/navigation.js'],
@@ -161,6 +161,5 @@ Running "uglify:my_target" (uglify) task
 
 
 
- 
+
  -automatic reload info at [https://www.lynda.com/CSS-tutorials/Reloading-your-browser-save/140777/153468-4.html]
- 
