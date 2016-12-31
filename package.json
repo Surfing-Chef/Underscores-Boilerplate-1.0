@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/Surfing-Chef/Underscores-Boilerplate-1.0/issues"
   },
-  "homepage": "https://github.com/Surfing-Chef/Underscores-Boilerplate-1.0#readme"
+  "homepage": "https://github.com/Surfing-Chef/Underscores-Boilerplate-1.0#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
 }
