@@ -170,7 +170,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');  // load watch package
   ...
     }, // uglify                
-    watch: {                    // comma seperated, new watch task object, 
+    watch: {                    // comma seperated, new watch task object,
       files: ['dev/js/*.js'],
       tasks: ['uglify']
     } // watch
@@ -183,7 +183,7 @@ module.exports = function(grunt) {
 ```console
 >grunt watch
 Running "watch" task
-Waiting... 
+Waiting...
 ```
 
 - Upon detecting changes in the specified file(s), the *_watch_* task will execute the attached task, *_uglify_*
@@ -211,7 +211,7 @@ Completed in 1.462s at Sat Dec 31 2016 15:15:54 GMT-0800 (Pacific Standard Time)
 
   // Register default task(s)
   grunt.registerTask('default', 'watch');
-  
+
 }; // module.exports
 ```
 
@@ -243,12 +243,11 @@ Waiting...
 </html>   
 ```
 
-- After restarting the terminal and running *_grunt_* command, load the wordpress site into a browser, or refresh it if loaded. Add the following to the end of *_header.php_*, after the `div.site-content`:
+- After restarting the terminal and running *_grunt_* command, load the Underscores Wordpress site into a browser, or refresh it if loaded. Add the following to the end of *_header.php_*, after the `div.site-content` and save your changes:
 ```html
 ...
 	<div id="content" class="site-content">
 	<h1>TEST TEXT to delete after testing</h1><!-- added new , delete after testing -->
 ```
 
-
-
+- The browser should have automatically updated itself
