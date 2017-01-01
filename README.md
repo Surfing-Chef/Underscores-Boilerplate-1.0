@@ -78,7 +78,7 @@ git push origin master
 
 - Git and Github are now ready to track changes.  Use of Github Desktop or Git Bash and the command line to track changes should be part of any development workflow. The full use potential of Git and Github is not within the scope of this document. At the very least, a version control system to track changes should be utilized. _[read more](https://www.g2crowd.com/categories/version-control-systems)_
 
-### Node.js and Ruby
+### Node.js, NPM, Ruby, Compass and Grunt
 - Check if **Node**, **NPM** and **Ruby** are installed:
 ```console
 > npm -v            ## Versions will show if installed.
@@ -102,6 +102,12 @@ ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]
 > gem install compass
 ```
 
+-  Install grunt-cli so grunt becomes available in the terminal:
+
+```console
+>npm install -g grunt-cli
+```
+
 ### package.json
 
 _[info link](https://docs.npmjs.com/getting-started/using-a-package.json)_
@@ -123,11 +129,6 @@ theme\root\directory> npm install --save-dev grunt
 > Previous steps regarding the *_package.json_* file, as well as the following ones about the *_gruntfile.js_*, are outlined in detail on [gruntjs.com](http://gruntjs.com/getting-started).
 
 ### grunt.js
--  Install grunt-cli so grunt becomes available in the terminal:
-
-```console
->npm install -g grunt-cli
-```
 
 - create a gruntfile.js starting with an uglify task to minify JavaScript files:
 ```javascript
@@ -158,8 +159,96 @@ Running "uglify:my_target" (uglify) task
 >> 3 files created.
 ```
 
+### Automation
+#### [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+
+- load the watch plugin, and create a watch task:
+```javascript
+module.exports = function(grunt) {
+  // Load Tasks
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');  // load watch package
+  ...
+    }, // uglify                
+    watch: {                    // comma seperated, new watch task object, 
+      files: ['dev/js/*.js'],
+      tasks: ['uglify']
+    } // watch
+  }); // grunt.initConfig
+}; // module.exports
+
+```
+
+- Run grunt watch in terminal. It waits to detect changes:
+```console
+>grunt watch
+Running "watch" task
+Waiting... 
+```
+
+- Upon detecting changes in the specified file(s), the *_watch_* task will execute the attached task, *_uglify_*
+```console
+>> File "dev\js\script.js" changed.
+Running "uglify:my_target" (uglify) task
+>> 3 files created.
+
+Done.
+Completed in 1.462s at Sat Dec 31 2016 15:15:54 GMT-0800 (Pacific Standard Time) - Waiting...
+```
+
+- *_`<Ctrl>-C`_* pressed twice  will cancel the task:
+```console
+^CTerminate batch job (Y/N)?
+^C
+>
+```
+
+#### default task(s)
+```javascript
+...
+    } // watch      
+  }); // grunt.initConfig
+
+  // Register default task(s)
+  grunt.registerTask('default', 'watch');
+  
+}; // module.exports
+```
+
+- A registered default task or list of tasks run when the grunt command is entered in the terminal:
+```console
+>grunt
+Running "watch" task
+Waiting...
+```
+
+#### reloading a browser on save
+- Create an *_options_* object and a *_scripts_* object in the *_watch_* task.  Move the *_files_* and *_tasks_* objects into the new *_scripts_* object.
+```javascript
+...
+    watch: {
+      options: { livereload: true },
+      scripts: {
+        files: ['dev/js/*.js'],
+        tasks: ['uglify']
+      }
+    } // watch
+```
+
+- Open footer.php from the theme's root directory, and add the following code just before the closing body tag:
+```html
+...
+  <script src="http://localhost:35729/livereload.js"></script>
+ </body>
+</html>   
+```
+
+- After restarting the terminal and running *_grunt_* command, load the wordpress site into a browser, or refresh it if loaded. Add the following to the end of *_header.php_*, after the `div.site-content`:
+```html
+...
+	<div id="content" class="site-content">
+	<h1>TEST TEXT to delete after testing</h1><!-- added new , delete after testing -->
+```
 
 
 
-
- -automatic reload info at [https://www.lynda.com/CSS-tutorials/Reloading-your-browser-save/140777/153468-4.html]
