@@ -17,10 +17,18 @@ module.exports = function(grunt) {
         } // files
       } // my_target
     }, // uglify
+
     watch: {
-      files: ['dev/js/*.js'],
-      tasks: ['uglify']
+      options: { livereload: true },
+      scripts: {
+        files: ['dev/js/*.js'],
+        tasks: ['uglify']
+      }, // scripts
+      html: {
+        files: ['*.php']
+      }
     } // watch
+
   }); // grunt.initConfig
 
   // Register default task(s)
