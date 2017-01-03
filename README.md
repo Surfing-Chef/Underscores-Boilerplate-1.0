@@ -252,8 +252,8 @@ Waiting...
 
 - The browser should have automatically updated itself
 
-### Compass Configuation File
-- Create a new file in the threme root directory called *_config.rb_*
+### Compass Configuration File(s)
+- Create a new file in the theme root directory called *_config.rb_*
 - Add the following lines of code and save it:
 ```ruby
 # Compass Configuration Properties
@@ -312,14 +312,13 @@ output_style = :nested
  ...
  ```
  
- - Now when any changes are made in the development scss files, a new development css file is made.  This can be minified with other plugins and saved to the root directory for faster loading, and smaller file size.
+ - Now when any changes are made in the development SCSS files, a new development CSS file is made, including comments indicating the SCSS sources.  This development CSS can then be minified with other plugins and saved to the root directory resulting in smaller file size and faster loading.
  
--  Alternatively, changing the css_dir and output_style properties in the config.rb will skip the extra step above:
+-  Alternatively, changing the *_css_dir_* and *_output_style_* properties in the *_config.rb_* will eliminate the extra steps above and extraneous processing. :
 ```ruby
 css_dir = '.'
 sass_dir = 'dev/sass'
 javascript_dir = 'dev/js'
 output_style = :nested
 ```
- 
  
