@@ -325,6 +325,7 @@ output_style = :nested
 ```
  
 ### Setup Susy
+#### [Susy Documentation](http://susydocs.oddbird.net/en/latest/#)
 - Install Susy for responsive web design from the terminal
 ```console
 > gem install susy
@@ -341,7 +342,7 @@ require 'susy'
 // Imported modules
 // Compass
 @import 'compass';
-@import 'susy';
+@import 'susyone';
 ```
 
 - And then modifiy the style.scss to import *_imports.scss*, adding new a new section to the table of contents as well:
