@@ -373,7 +373,7 @@ require 'susy'
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-@import "_imports";
+@import "imports";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 ```
