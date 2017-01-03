@@ -251,3 +251,75 @@ Waiting...
 ```
 
 - The browser should have automatically updated itself
+
+### Compass Configuation File
+- Create a new file in the threme root directory called *_config.rb_*
+- Add the following lines of code and save it:
+```ruby
+# Compass Configuration Properties
+css_dir = 'dev/css'
+sass_dir = 'dev/sass'
+javascript_dir = 'dev/js'
+output_style = :nested
+```
+
+- Back in the *_grunt.js_* file, make the following additions:
+- load the *_grunt-contrib-compass_* plugin
+```javascript
+...
+  // Load Tasks
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+```
+
+- add a *_compass_* task to the following lines of code in *_grunt.js_*: 
+```javascript
+...
+    }, // uglify
+
+    compass: {
+      dev: {
+        options: {
+          config: 'config.rb'
+        } //options
+      } //dev
+    }, // compass
+...
+    watch: {
+      options: { livereload: true },
+      scripts: {
+        files: ['dev/js/*.js'],
+        tasks: ['uglify']
+      }, // scripts
+      sass: {
+        files: ['dev/sass/*.scss'],
+        tasks: ['compass:dev']
+      }, // sass
+```
+
+- add instructions into the *_watch_* task to execute the *_compass_* task
+```javascript
+...
+    watch: {
+...
+      }, // scripts
+      sass: {
+        files: ['dev/sass/*.scss'],
+        tasks: ['compass:dev']
+      }, // sass
+ ...
+ ```
+ 
+ - Now when any changes are made in the development scss files, a new development css file is made.  This can be minified with other plugins and saved to the root directory for faster loading, and smaller file size.
+ 
+-  Alternatively, changing the css_dir and output_style properties in the config.rb will skip the extra step above:
+```ruby
+css_dir = '.'
+sass_dir = 'dev/sass'
+javascript_dir = 'dev/js'
+output_style = :nested
+```
+ 
+ 
