@@ -337,9 +337,44 @@ require 'susy'
 
 - To make Susy available when developing scss, add an *_imports.scss* file to the dev/sass folder root with the following lines:
 ```css
+...
 // Imported modules
 // Compass
 @import 'compass';
 @import 'susy';
 ```
+
+- And then modifiy the style.scss to import *_imports.scss*, adding new a new section to the table of contents as well:
+```css
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Utilities
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import "_imports";
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+```
+
 This allows the the core modules of compass - CSS3, Typography and Functions - to be imported and used in a project.  The option to  import specific parts of the modules is also available. Find more details about the Compass Core Framework [here](http://compass-style.org/reference/compass/). 
