@@ -1,5 +1,5 @@
-# location of css folder
-css_dir = 'dev/css'
+# Compass Configuration Properties
+css_dir = '.'
 sass_dir = 'dev/sass'
 javascript_dir = 'dev/js'
-output_style = :nested
+output_style = :compressed
