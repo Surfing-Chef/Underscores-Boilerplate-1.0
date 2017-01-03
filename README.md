@@ -379,3 +379,4 @@ require 'susy'
 ```
 
 This allows the the core modules of compass - CSS3, Typography and Functions - to be imported and used in a project.  The option to  import specific parts of the modules is also available. Find more details about the Compass Core Framework [here](http://compass-style.org/reference/compass/). 
+
