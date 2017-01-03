@@ -253,6 +253,8 @@ Waiting...
 - The browser should have automatically updated itself
 
 ### Compass Configuration File(s)
+#### [Compass Core Framework](http://compass-style.org/)
+
 - Create a new file in the theme root directory called *_config.rb_*
 - Add the following lines of code and save it:
 ```ruby
@@ -322,3 +324,22 @@ javascript_dir = 'dev/js'
 output_style = :nested
 ```
  
+### Setup Susy
+- Install Susy for responsive web design from the terminal
+```console
+> gem install susy
+```
+
+- And modify the *_config.rb_* file to load susy into the project for use.  Add one line at the very top of the file:
+```ruby
+require 'susy'
+```
+
+- To make Susy available when developing scss, add an *_imports.scss* file to the dev/sass folder root with the following lines:
+```css
+// Imported modules
+// Compass
+@import 'compass';
+@import 'susy';
+```
+This allows the the core modules of compass - CSS3, Typography and Functions - to be imported and used in a project.  The option to  import specific parts of the modules is also available. Find more details about the Compass Core Framework [here](http://compass-style.org/reference/compass/). 
