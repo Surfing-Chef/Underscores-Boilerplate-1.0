@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: underscoresboilerplate
-Tags:
+Tags: Compass, Susy, Grunt, Workflow, Underscores, Responsive
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Utilities
 # Normalize
 # Typography
 # Elements
@@ -41,7 +42,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+
+/*--------------------------------------------------------------
+# Utilities
 --------------------------------------------------------------*/
+@import "_imports";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
