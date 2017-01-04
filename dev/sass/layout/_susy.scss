@@ -4,8 +4,17 @@ $colummn-width: 4em;
 $gutter-width: 1em;
 $grid-paddding: $gutter-width;
 
+// set box-sizing for accurate layouts
 @include border-box-sizing;
 
+// media break point variables
 $small: 30em;
 $medium: 47em;
 $large: 75em;
+
+// Site specific code goes here
+.layout {
+  @include container;
+  padding: 3px;
+
+}

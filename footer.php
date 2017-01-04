@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+		<div class="site-info layout">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscoresboilerplate' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'underscoresboilerplate' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscoresboilerplate' ), 'underscoresboilerplate', '<a href="https://automattic.com/" rel="designer">Surfing Chef</a>' ); ?>
