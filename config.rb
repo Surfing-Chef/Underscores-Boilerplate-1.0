@@ -1,4 +1,4 @@
-## Initial config
+## Development config
 
 require 'susy'
 require 'compass/import-once/activate'
@@ -20,3 +20,8 @@ relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = true
+
+# Calls config_prod.rb to create a compressed production version
+on_stylesheet_saved do
+  `compass compile -c config_prod.rb --force`
+end
