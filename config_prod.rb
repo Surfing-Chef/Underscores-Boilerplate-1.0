@@ -2,12 +2,11 @@
 require 'susy'
 
 # Compass Configuration Properties
-http_path = '/'
-css_dir = '.'
-sass_dir = '_/sass'
-javascript_dir = '_/js'
-#images_dir = "_/images"
+http_path = "/"
+css_dir = "."
+sass_dir = "_/sass"
 #javascripts_dir = "_/javascripts"
+#images_dir = "_/images"
 
 output_style = :compressed
 line_comments = false

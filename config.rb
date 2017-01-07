@@ -9,8 +9,8 @@ require 'compass/import-once/activate'
 http_path = "/"
 css_dir = "_/stylesheets"
 sass_dir = "_/sass"
-#images_dir = "_/images"
 #javascripts_dir = "_/javascripts"
+#images_dir = "_/images"
 
 output_style = :expanded
 line_comments = true
