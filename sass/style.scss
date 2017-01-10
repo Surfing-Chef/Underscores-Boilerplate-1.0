@@ -1,15 +1,14 @@
 /*!
-Theme Name: Underscores Boilerplate
-Theme URI: http://underscores.me/
+Theme Name: Bourbon Boilerplate
+Theme URI: https://github.com/Surfing-Chef/underscores-boilerplate/tree/Surfing-Chef-4.0
 Author: Surfing Chef
 Author URI: http://surfing-chef@surfing-chef.com
-Description: Underscores with Sass, Grunt and Compass workflow
+Description: A WordPress theme built using Sass, Bourbon, Bitters, Neat and Refills
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: underscoresboilerplate
-Tags:
-
+Text Domain: bourbonboilerplate
+Tags:Wordpress, Sass, Bourbon, Bitters, Neat, Refills
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
@@ -24,28 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-@import "plugins/base/base";
-//@import "variables-site/variables-site";
-@import "mixins/mixins-master";
-@import "plugins/dir-plugins";
+# Plugins
 
 /*--------------------------------------------------------------
 # Normalize
@@ -53,56 +31,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "normalize";
 
 /*--------------------------------------------------------------
-# Typography
+# Plugins
 --------------------------------------------------------------*/
-@import "typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+@import "plugins/dir-plugins";
