@@ -65,4 +65,3 @@ Push the changes in your local repository to GitHub.
 ```console
 git push origin master
 ```
-test
