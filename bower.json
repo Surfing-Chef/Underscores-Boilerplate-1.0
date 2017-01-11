@@ -1,0 +1,17 @@
+{
+  "name": "SurfingChef5_0",
+  "homepage": "https://github.com/Surfing-Chef/underscores-boilerplate",
+  "authors": [
+    "Surfing-Chef <surfing-chef@surfing-chef.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

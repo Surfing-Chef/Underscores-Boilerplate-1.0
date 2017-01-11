@@ -61,8 +61,8 @@ $RECYCLE.BIN/
 *.sql
 *.sqlite
 
-# Build SystemsSass #
-#####################
+# Build Systems #
+#################
 node_modules/
 bower_components/
 .sass-cache
