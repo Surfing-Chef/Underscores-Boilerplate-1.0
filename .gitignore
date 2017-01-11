@@ -61,14 +61,18 @@ $RECYCLE.BIN/
 *.sql
 *.sqlite
 
-# Sass #
-########
+# Build SystemsSass #
+#####################
+node_modules/
+bower_components/
 .sass-cache
-node_modules
+*.css.map
+build/
+dist/
 .npm-debug.log
 tmp
-*.css.map
+
 
 # Ruby #
-######################
+########
 Gemfile.lock
