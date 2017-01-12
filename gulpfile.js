@@ -15,8 +15,8 @@ gulp.task('scripts', function(){  // task called 'scripts'
 
 // Watch Task - watch files and folders for changes
 gulp.task('watch', function(){
-  gulp.watch('app/js/**/*.js', ['scripts']);  // watch a task called 'scripts'
+  gulp.watch('_/js/**/*.js', ['scripts']);  // watch a task called 'scripts'
 });
 
 // Default Task - runs both 'scripts' and 'watch' tasks asynchronously, at the same time
-gulp.task('default', ['scripts']);
+gulp.task('default', ['scripts', 'watch']);

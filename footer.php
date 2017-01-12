@@ -23,6 +23,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script src="/underscores-dev/wp-content/themes/underscores-boilerplate/_/js/main.js"></script>
 </body>
 </html>
