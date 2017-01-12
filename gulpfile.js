@@ -16,7 +16,7 @@ gulp.task('scripts', function(){  // task called 'scripts'
 
 // Compass/Sass Tasks - watch files and folders for changes
 gulp.task('compass', function(){
-  gulp.src('_/sass/style.scss')
+  gulp.src('_/sass/**/*.scss')
   .pipe(compass({
     config_file: './config.rb',
     css: '_/css',
@@ -29,7 +29,7 @@ gulp.task('compass', function(){
 // Watch Task - watch files and folders for changes
 gulp.task('watch', function(){
   gulp.watch('_/js/**/*.js', ['scripts']);
-  gulp.watch('_/sass/style.scss', ['compass']);
+  gulp.watch('_/sass/**/*.scss', ['compass']);
 });
 
 // Default Task - runs specified tasks asynchronously
