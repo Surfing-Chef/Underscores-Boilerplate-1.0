@@ -1,0 +1,22 @@
+{
+  "name": "surfingchef5_0",
+  "version": "1.0.0",
+  "description": "**Underscores with Sass**\r The master branch is a basic theme, sass ready, with no specified workflow. Additional branches represent different workflows based on the Underscores theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Surfing-Chef/underscores-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Surfing-Chef/underscores-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Surfing-Chef/underscores-boilerplate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
