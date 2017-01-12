@@ -1,6 +1,7 @@
 // REQUIRED
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
+    compass = require('gulp-compass'),
     rename = require('gulp-rename');
 
 // NAMED TASKS
@@ -13,10 +14,23 @@ gulp.task('scripts', function(){  // task called 'scripts'
 
 });
 
-// Watch Task - watch files and folders for changes
-gulp.task('watch', function(){
-  gulp.watch('_/js/**/*.js', ['scripts']);  // watch a task called 'scripts'
+// Compass/Sass Tasks - watch files and folders for changes
+gulp.task('compass', function(){
+  gulp.src('_/sass/style.scss')
+  .pipe(compass({
+    config_file: './config.rb',
+    css: '_/css',
+    sass: '_/sass',
+    require: ['susy']
+  }))
+    .pipe(gulp.dest('_/css/'));
 });
 
-// Default Task - runs both 'scripts' and 'watch' tasks asynchronously, at the same time
-gulp.task('default', ['scripts', 'watch']);
+// Watch Task - watch files and folders for changes
+gulp.task('watch', function(){
+  gulp.watch('_/js/**/*.js', ['scripts']);
+  gulp.watch('_/sass/style.scss', ['compass']);
+});
+
+// Default Task - runs specified tasks asynchronously
+gulp.task('default', ['scripts', 'compass', 'watch']);
