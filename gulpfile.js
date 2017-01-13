@@ -7,29 +7,29 @@ var gulp = require('gulp'),
 // NAMED TASKS
 // Scripts Task
 gulp.task('scripts', function(){  // task called 'scripts'
-  gulp.src(['_/js/**/*.js', '!_/js/**/*.min.js'])
+  gulp.src(['dev/js/**/*.js', '!dev/js/**/*.min.js'])
   .pipe(rename({suffix:'.min'}))
   .pipe(uglify())
-  .pipe(gulp.dest('_/js'));
+  .pipe(gulp.dest('dev/js'));
 
 });
 
 // Compass/Sass Tasks - watch files and folders for changes
 gulp.task('compass', function(){
-  gulp.src('_/sass/**/*.scss')
+  gulp.src('dev/sass/**/*.scss')
   .pipe(compass({
     config_file: './config.rb',
-    css: '_/css',
-    sass: '_/sass',
+    css: 'dev/css',
+    sass: 'dev/sass',
     require: ['susy']
   }))
-    .pipe(gulp.dest('_/css/'));
+    .pipe(gulp.dest('dev/css/'));
 });
 
 // Watch Task - watch files and folders for changes
 gulp.task('watch', function(){
-  gulp.watch('_/js/**/*.js', ['scripts']);
-  gulp.watch('_/sass/**/*.scss', ['compass']);
+  gulp.watch('dev/js/**/*.js', ['scripts']);
+  gulp.watch('dev/sass/**/*.scss', ['compass']);
 });
 
 // Default Task - runs specified tasks asynchronously
