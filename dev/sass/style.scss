@@ -23,7 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
+# Utils
 # Typography
 # Elements
 # Forms
@@ -43,16 +43,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Utils
+--------------------------------------------------------------*/
+// breakpoint import path adjustment fix - if using breakpoint
+// @import "C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/breakpoint-2.7.1/stylesheets/breakpoint";
+
 @import "susy";
-@import "C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/breakpoint-2.7.1/stylesheets/breakpoint";
 @import "normalize";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-//@import "normalize";
 
 /*--------------------------------------------------------------
 # Typography
