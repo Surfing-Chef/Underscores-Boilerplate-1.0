@@ -39,7 +39,7 @@ gulp.task('compass', function(){
 gulp.task('php', function(){
   php.server({
     base: './',
-    port: 810,
+    port: 8010,
     keepalive: true
   });
 });
@@ -53,7 +53,8 @@ gulp.task('html', function(){
 // Browser-Sync Tasks - tasks related to browser-sync
 gulp.task('browser-sync', function(){
   browserSync({
-    proxy: 'http://localhost/underscores-dev/'
+    proxy: 'http://localhost/underscores-dev/',
+    files: ['**/*.php']
   });
 });
 
