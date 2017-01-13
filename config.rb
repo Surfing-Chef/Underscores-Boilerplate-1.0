@@ -7,11 +7,11 @@ require 'breakpoint'
 # Set this to the root of your project when deployed:
 project_type = :stand_alone
 http_path = "/"
-css_dir = "_/css"
-sass_dir = "_/sass"
-javascripts_dir = "_/js"
-fonts_dir = "_/fonts"
-images_dir = "_/images"
+css_dir = "dev/css"
+sass_dir = "dev/sass"
+javascripts_dir = "dev/js"
+fonts_dir = "dev/fonts"
+images_dir = "dev/images"
 line_comments = true
 preferred_syntax = :scss
 output_style = :expanded

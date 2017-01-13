@@ -1,9 +1,9 @@
 // REQUIRED
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
-    compass = require('gulp-compass'),
-    plumber = require('gulp-plumber'),
-    autoprefixer = require('gulp-autoprefixer'),
+    compass = require('gulp-compass');
+    plumber = require('gulp-plumber');
+    autoprefixer = require('gulp-autoprefixer');
     rename = require('gulp-rename');
 
 // NAMED TASKS
@@ -22,10 +22,9 @@ gulp.task('compass', function(){
   gulp.src('dev/sass/**/*.scss')
   .pipe(plumber())
   .pipe(compass({
-    config_file: './config.rb',
+    config_file: 'config.rb',
     css: 'dev/css',
-    sass: 'dev/sass',
-    require: ['susy']
+    sass: 'dev/sass'
   }))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dev/css/'));

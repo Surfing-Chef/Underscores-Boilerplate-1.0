@@ -5,7 +5,7 @@ require 'susy'
 project_type = :stand_alone
 http_path = "/"
 css_dir = "."
-sass_dir = "_/sass"
+sass_dir = "dev/sass"
 line_comments = false
 preferred_syntax = :scss
 output_style = :compressed
