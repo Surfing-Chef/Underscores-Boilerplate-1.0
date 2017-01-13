@@ -2,12 +2,15 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     compass = require('gulp-compass'),
+    plumber = require('gulp-plumber'),
+    autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename');
 
 // NAMED TASKS
 // Scripts Task
 gulp.task('scripts', function(){  // task called 'scripts'
   gulp.src(['dev/js/**/*.js', '!dev/js/**/*.min.js'])
+  .pipe(plumber())
   .pipe(rename({suffix:'.min'}))
   .pipe(uglify())
   .pipe(gulp.dest('dev/js'));
@@ -17,12 +20,14 @@ gulp.task('scripts', function(){  // task called 'scripts'
 // Compass/Sass Tasks - watch files and folders for changes
 gulp.task('compass', function(){
   gulp.src('dev/sass/**/*.scss')
+  .pipe(plumber())
   .pipe(compass({
     config_file: './config.rb',
     css: 'dev/css',
     sass: 'dev/sass',
     require: ['susy']
   }))
+    .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dev/css/'));
 });
 
