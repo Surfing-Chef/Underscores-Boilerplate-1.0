@@ -1,67 +1,16 @@
-# Underscores-Boilerplate-1.0
-**Underscores with Sass**
-The master branch is a basic theme, sass ready, with no specified workflow. Additional branches represent different workflows based on the Underscores theme.
+# About 4.0
+> This is an outline for the creation of a WordPress theme created with Bourbon, Bitters, Neat and Refills. Unlike the other workflows in this repository, 4.0 veers away from the Underscores theme. Previous branches still represent different workflows based on the Underscores starter theme.
+  
+####The Surfing-Chef-4.0 branch builds a workflow that implements Bourbon, Neat, Bitter and Refills  
 
-##*INSTALLATION OUTLINE*
-## Wordpress
-- Create underscores-dev folder and install fresh copy of Wordpress.
-- Change timezone, set tagline etc on dashboard.
-- Download the latest test data: [https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml].
-- Activate Wordpress Import `Tools > Import > WordPress > Install Now`.
-- Once installed, click `Run Imported > Choose File`.
-- Navigate to the downloaded theme-unit-test-data.xml and click `Upload file and import`.
-- Under "Import Attachments," check the `Download and import file attachments` box and click `submit`.
+- Use the steps outlined above - WordPress, Underscores, Command Line, Git and GitHub  
+or  
+- You can grab the master from [this repository](https://github.com/Surfing-Chef/underscores-boilerplate) if starting a new project.
+- Ensure your system has a good install of Ruby. I uninstalled and did a fresh install when writing the section in this wiki, [Ruby in Surfing-Chef-3.0](https://github.com/Surfing-Chef/underscores-boilerplate/wiki/Ruby-in-Surfing-Chef-3.0).
 
-## Underscores
-- Go to [https://underscores.me/] and click `Advanced Options` under Theme Name box.
-- Fill out the form, check the `_sassify!` box and click `GENERATE`.
-- Copy the contents of the downloaded folder into the themes directory of your fresh wordpress installation.
-
-## Working with the Command Line
-The next steps - Git, Node.js, Ruby - require some use of the command line.  
-I was intimidated by this at first, but its not really that complex.
-There are wordpress plugins for implementing sass in wordpress themes,
-but I like to know how and why things are.
-Using the command line gives one much more control over their package installs
-and updates as well.
-
-## Git and Github
-If you dont use Git and Github, then move along. I feel bad for you, not using some sort of version control system, but be that as it may...
-
-Sign in to your Github account.
-Create a new repository, but do not create a **README.md** or **.gitignore** at this point. Adding anything except a name at this point confuses the initialization process. 
-You can go back and create a **README.md** later, and we will create a **.gitignore** later.
-Ensure you have git installed on your computer.  I use Github Desktop which comes with git and git bash. Download
-and install from [https://desktop.github.com/]. Be sure to click the **Use Git from the Windows Command Prompt** option.
-
-The following is taken from the pages of Github: [https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/]:
-
-Open a new command line, and navigate into the directory of your underscores theme.  Mine is as follows:
-```console
-cd C:\wamp64\www\underscores-dev\wp-content\themes\underscoresboilerplate
-```
-
-Initialize the local directory as a Git repository:
-```console
-git init
-``` 
-
-Add the files in your new local repository. This stages them for the first commit. Disregard any **_LF will be replaced by CRLF..._** warnings.
-```console
-git add .
-```  
-
-Commit the files that you've staged in your local repository.
-```console
-git commit -m "initial commit"
-``` 
-
-In the Command prompt, add the URL for the remote repository where your local repository will be pushed.  This can be copied from the link within the repository you set up above.  Look for **Clone or download** copy the URL from there.  You might see instructions similar to these as well.
-```console
-git remote add origin https://github.com/YOUR-username/YOUR-repository-name.git
-``` 
-
-Push the changes in your local repository to GitHub.
-```console
-git push origin master
-``` 
+####Bookmarks:
+[Video Tutorial](https://www.youtube.com/watch?v=8ItNE_DX6Cc&t=18s)  
+[bourbon.io](http://bourbon.io/)  
+[neat.bourbon.io](http://neat.bourbon.io/)  
+[bitters.bourbon.io](http://bitters.bourbon.io/)  
+[refills.bourbon.io](http://refills.bourbon.io/)  
